@@ -39,7 +39,7 @@ Congratulations! You have now created your first motor controller object!
 
 ### 4. Setting the motor output
 
-In `teleopInit`, type `motor.set(0.3);`. This will set the motor to run forward at 30%.
+In `teleopInit`, type `motor.set(0.3);`. This will set the motor to run forward at 30% as soon as we enabled the robot in teleop mode.
 
 Next, type `motor.stopMotor();` in `disabledInit`. This will stop the motor whenever we disable the robot.
 
