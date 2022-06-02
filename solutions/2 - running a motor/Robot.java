@@ -1,11 +1,11 @@
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 
 public class Robot extends TimedRobot {
-    private WPI_TalonFX motor = new WPI_TalonFX(8, "CANivore");
+    private WPI_TalonSRX motor = new WPI_TalonSRX(11);
 
     @Override
     public void robotInit() {}

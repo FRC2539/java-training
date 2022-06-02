@@ -2,7 +2,7 @@
 
 _Given that this requires a robot, these steps need to be supplemented by actual interaction between you and the lead programmer/programming mentor._
 
-For this example, we will be controlling a motor (Talon FX) at a percent output (-1 to 1).
+For this example, we will be controlling a motor (Talon SRX) at a percent output (-1 to 1).
 
 ### 1. Installing libraries
 
@@ -27,13 +27,13 @@ Open `Robot.java` in _src/main/java/frc/robot_.
 
 ### 3. Instantiating the motor object
 
-First, import `WPI_TalonFX` by typing `import`, and then as you type `WPI_TalonFX`, use the auto complete to import the correct class (press enter on the correct class).
+First, import `WPI_TalonSRX` by typing `import`, and then as you type `WPI_TalonSRX`, use the auto complete to import the correct class (press enter on the correct class).
 
 Right below the `Robot` class declaration, we will instatiate our motor.
 
-Type `private WPI_TalonFX motor = new WPI_TalonFX(8, "CANivore");`
+Type `private WPI_TalonSRX motor = new WPI_TalonSRX(11);`
 
-**Note: the first parameter is the port of the motor, and the second is the name of the CANivore canbus. If this is not 2022, these are likely different, so ask a trustworthy member of the programming team for the correct information.**
+**Note: the parameter passed to the constructor is the port of the motor. If this is not 2022, this port is likely different, so ask a trustworthy member of the programming team for the correct information.**
 
 Congratulations! You have now created your first motor controller object!
 
