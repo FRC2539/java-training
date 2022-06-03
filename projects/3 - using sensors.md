@@ -49,3 +49,40 @@ If it is incorrectly calibrated, confirm with a trustworthy programmer (lead pro
 When you are satisfied, click disable (or press enter), which will disable the robot.
 
 Nice job!
+
+### 5. Optional Project!
+
+To enhance your skills, this project will have you program the ball track on a 2022 (Rapid React) style robot.
+
+Given the additional complexity, only necessary information will be provided, and it will be up to you to correctly implement the logic.
+
+#### Explanation of the ball track
+
+Balls enter through the intake, and from there, the conveyor moves the balls through the robot and towards the chamber. The chamber holds one ball ready to shoot, while the conveyor can then hold a second ball.
+
+#### Important information
+
+**Ports**
+Conveyor Motor - 11
+Chamber Motor - 12
+
+Conveyor Proximity Sensor - 0
+Chamber Proximity Sensor - 1
+
+**In the 2022 robot, both motors run "backwards", so moving a ball through the ball track means driving the motor with a negative percent output.**
+
+#### Logic
+
+The goal of this system is to efficiently and consistently store balls within the robot.
+
+In a hypothetical scenario with two balls entering the robot, we want to stop the first ball once it reaches the chamber proximity sensor, and the second once it has been detected by the conveyor proximity sensor and when there is already a ball in the chamber.
+
+There are three main scenarios we need to consider to make this possible.
+
+1. Both proximity sensors detect a ball
+2. Only the chamber proximity sensor detects a ball
+3. Any other situation
+
+From here, it is your task to create these additional motors and sensors, and to fill in the logic to enable ball storage in the robot.
+
+Good luck!
