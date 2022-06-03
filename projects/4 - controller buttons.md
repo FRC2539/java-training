@@ -26,8 +26,8 @@ Your task is to use a joystick button to control the ball track. The ball track 
 
 _These ports are for the 2022 robot controllers; ask a trustworthy programmer for the correct ports and numbers if you are not using this robot._
 
--   Joystick - 0 (Left Thrustmaster Joystick)
--   JoystickButton - 3 (Left Thumb Button)
+-   `Joystick` - 0 (Left Thrustmaster Joystick)
+-   `JoystickButton` - 3 (Left Thumb Button)
 
 #### Final notes
 
