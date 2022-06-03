@@ -63,11 +63,11 @@ Balls enter through the intake, and from there, the conveyor moves the balls thr
 #### Important information
 
 **Ports**
-Conveyor Motor - 11
-Chamber Motor - 12
 
-Conveyor Proximity Sensor - 0
-Chamber Proximity Sensor - 1
+-   Conveyor Motor - 11
+-   Chamber Motor - 12
+-   Conveyor Proximity Sensor - 0
+-   Chamber Proximity Sensor - 1
 
 **In the 2022 robot, both motors run "backwards", so moving a ball through the ball track means driving the motor with a negative percent output.**
 
