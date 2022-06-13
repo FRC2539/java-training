@@ -62,7 +62,7 @@ The shooter uses two `WPI_TalonFX` motors (see constants file above) for the sho
 
 The shooter motors are geared at a gear ratio of 3:2, and the front shooter motor should be inverted in order to shoot the balls correctly. Also, make sure that the shooter motors are run in coast mode (neutral mode).
 
-To convert RPM (rotations/revolutions per minute) to Talon Units, follow the given pseudocode:
+To convert RPM (rotations/revolutions per minute) to Talon Units, follow the given expression:
 
 `(rpm * 2048 * GEAR_RATIO) / 600`
 

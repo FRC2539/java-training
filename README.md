@@ -33,6 +33,6 @@ Lastly, I highly recommend learning VSCode shortcuts, as they can dramatically s
 
 The next step is to get hands on!
 
-Visit the projects folder of this github repository for further instructions!
+Visit the [projects folder](projects) of this github repository for further instructions!
 
-_Note: solutions are in the solutions directory_
+_Note: solutions are in the [solutions](solutions) directory_
