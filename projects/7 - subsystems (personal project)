@@ -1,0 +1,89 @@
+# Subsystems (personal project)
+
+_There are no solutions for this module, as they already exist in the current robot code._
+
+In this final project, you will be free to choose what you create!
+
+You can create any one or combination of subsytems and their respective commands from this year's game (2022).
+
+As always, take full advantage of the documentation available online.
+
+**All information needed for the 2022 robot can be found on the [Javabot Github page](https://github.com/FRC2539/javabot). See the `constants` file for the ports you need, and `common/controller` for the controller code.**
+
+Choose one or more of the the subsystems and build it! This is a challenging project, so ask questions when necessary.
+
+### Balltrack Subsystem
+
+While this was the focus of the projects up until this point, there is much, much more to do for this subsystem.
+
+Most of the work for this subsystem will go into internal logic rather than running complex mechanisms with precision (like the shooter or drivetrain).
+
+Here are some of the guidelines for this subsystem:
+
+-   This subsystem should abstract away (hide) the complexity of controlling the intake, conveyor, and chamber.
+    -   The intake was not a part of the previous projects, but see the constants file linked above for the motor port.
+    -   Additionally, you will need to control the intake piston (`DoubleSolenoid`), so check the constants and the docs for guidance on doing so.
+        -   FYI: We use REV Pneumatics Hub
+-   The commands that use this subsystem should only call a few functions from the subsystem. The subsystem should handle the complex logic behind the scenes, while the commands just "give commands".
+-   The subsystem should have modes for intaking and shooting at the minimum.
+    -   Some other possibilities are intaking and shooting, reversing the system, and preparing the balls to shoot without using the intake.
+-   Create a command for intaking balls, and any others if you choose to create complementary subsystems (like the shooter).
+
+### Shooter Subsystem
+
+The shooter subsystem is a relatively simple subsystem, yet it has some intruiging aspects.
+
+It controls the shooting motors as well as the angle that the shooter shoots at.
+
+Additionally, it is responsible for calculating the correct RPM values for a given distance from the target.
+
+#### Important Information
+
+**Make sure to configure your motors through the CANivore for this subsystem (see constants linked above for the CANivore name).**
+
+The shooter uses two `WPI_TalonFX` motors (see constants file above) for the shooter and a `DoubleSolenoid` for setting the angle of the shooter.
+
+The shooter motors are geared at a gear ratio of 3:2, and the front shooter motor should be inverted in order to shoot the balls correctly. Also, make sure that the shooter motors are run in coast mode (neutral mode).
+
+To convert RPM (rotations/revolutions per minute) to Talon Units, follow the given pseudocode:
+
+`(rpm * 2048 * GEAR_RATIO) / 600`
+
+Undo the math in order to calculate the current RPMs.
+
+#### Subsystem Guidelines
+
+**I recommend looking at `common/control/ShooterState.java` and `common/control/ShooterStateMap.java` in Javabot (linked at the top). Feel free to reuse these in your own project.**
+
+-   The subsystem should encapsulate all shooting functionality, making it easily accessible in commands. Some of these features include:
+    -   Calculating the correct shooter state for the given distance
+    -   Custom shooting states for fender shoots (right against the hub)
+    -   Simple functions for setting the state of the shooter and stopping it
+        -   **Check out the [WPILIB PID tuning page](https://docs.wpilib.org/en/stable/docs/software/advanced-controls/introduction/tuning-pid-controller.html) for guidance on tuning the PID values for the shooter.**
+        -   Additionally, you may want to ask an experienced programmer for help in doing this.
+    -   Sending the current RPMs to the network tables
+    -   Creating a test command that shoots at RPMs sent via network tables to the robot
+    -   (If you created the limelight subsystem) Shooting using the distance value from the limelight
+    -   (If you created the balltrack subsystem) Creating a comprehensive shooting command(s) that uses the balltrack to feed balls into the shooter
+
+### Climber Subsystem
+
+The climber subsystem moves the climber up and down, as well as changes the angle for traversal climbing.
+
+#### Important Information
+
+**Make sure to configure your motor through the CANivore for this subsystem (see constants linked above for the CANivore name).**
+
+The climber uses one `WPI_TalonFX` motor (see constants file above) for raising and lowering the climber and a `DoubleSolenoid` for setting the angle of the climber (we use REVPH control for pneumatics).
+
+The soft (encoder) limits of the shooter are very important, so they are given for this subsystem. Make sure to enable them when configuring the motor.
+
+-   Upper Limit - 230000
+-   Lower Limit - 8000
+
+Additionally, the climber should be run at 100% output with a 0.5 second ramp duration. Since we want the climber to stop when it is told to, make sure the neutral mode is brake.
+
+#### Subsystem Guidelines
+
+-   The climber subsystem should enable simple control of raising, lowering, stopping, and angling the climber arm.
+-   Create commands for all of the previously listed features.
