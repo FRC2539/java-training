@@ -8,7 +8,11 @@ For learning Java, we currently recommend using [codecademy](https://www.codecad
 
 If you choose codecademy, skip any of the parts that require payment, you needn't pay money to learn to program online.
 
+Also, **you can skip "String Methods", "Two-Dimensional Arrays", and "Debugging", as they aren't strictly required for programming a robot.** That being said, these are still useful to know, especially the section about debugging, so feel free to go back after the training to learn more.
+
 ## Part 2 - Installing Software
+
+_(Skip this part if you are working with one of the team laptops)_
 
 To program FRC robots in Java, a custom build of Visual Studio Code is required.
 
