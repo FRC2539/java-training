@@ -115,6 +115,8 @@ Also, if you do copy or implement them yourself, they will make your subsystems 
 
 ### Swerve Drive Subsystem
 
+**Currently, I advise against starting with the Swerve Drive Subsystem, unless you have a strong desire to do so. It will take much longer than any other subsystem, and it isn't necessary to have this level of skill before programming the actual robot.**
+
 To begin, the Swerve Drive Subsystem is definitely the hardest and most complex subsystem to implement.
 
 It involves not only being able to correctly control a complex system like a swerve drivetrain, but a fully featured swerve drive can also follow PathPlanner/PathWeaver/WPILIB trajectories.
@@ -126,7 +128,7 @@ Given the difficulty of writing the code yourself, you may be tempted to copy an
 #### Great Resources
 
 -   The [Javabot swerve drive subsystem](https://github.com/FRC2539/javabot/blob/development/src/main/java/frc/robot/subsystems/SwerveDriveSubsystem.java) is our own implementation of swerve drive, so you can use this as a solution. If you read it too readily you may end up copying it.
--   SDS has their own [swerve template](https://github.com/SwerveDriveSpecialties/swerve-template) with great example code. Along with the warnings for the previous resource, be wary of their gyroscope implementation as it is based on the Pigeon IMU rather than the NavX that we currently use.
+-   ~~SDS has their own [swerve template](https://github.com/SwerveDriveSpecialties/swerve-template) with great example code. Along with the warnings for the previous resource, be wary of their gyroscope implementation as it is based on the Pigeon IMU rather than the NavX that we currently use.~~
 -   See the ["Swerve Drive Kinematics"](https://docs.wpilib.org/en/stable/docs/software/kinematics-and-odometry/swerve-drive-kinematics.html) article on WPILIB docs for a guide on the built-in swerve code in WPILIB.
 
 #### Important Information
