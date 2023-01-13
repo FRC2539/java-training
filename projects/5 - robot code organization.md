@@ -19,13 +19,13 @@ Your task is to refactor our current code into a well-organized command based ro
 Given the complexity of this project, I am linking various important pages here for your assistance. I would strongly recommend reading these to understand how the framework works and how to successfully implement it.
 
 -   [What Is “Command-Based” Programming?](https://docs.wpilib.org/en/stable/docs/software/commandbased/what-is-command-based.html) - Provides an overview of command-based programming
+-   **[Organizing Command-Based Robot Projects](https://docs.wpilib.org/en/latest/docs/software/commandbased/organizing-command-based.html#) - Highly recommended, provides a guide to modern methods for controlling a robot.**
 -   [Subsystems](https://docs.wpilib.org/en/stable/docs/software/commandbased/subsystems.html) - Explains how to create subsystems
 -   [Commands](https://docs.wpilib.org/en/stable/docs/software/commandbased/commands.html) - Explains how to create commands
 -   [The Command Scheduler](https://docs.wpilib.org/en/stable/docs/software/commandbased/command-scheduler.html) - Recommended reading; explains how command based code is run behind the schenes
 -   [Binding Commands to Triggers](https://docs.wpilib.org/en/stable/docs/software/commandbased/binding-commands-to-triggers.html) - Recommended reading; explains how to use buttons in a command based way, rather than an imperative way
 -   [Structuring a Command-Based Robot Project](https://docs.wpilib.org/en/stable/docs/software/commandbased/structuring-command-based-project.html) - Explains how to structure robot code, as well as some information on the `RobotContainer`.
--   [ArmBot Example](https://github.com/wpilibsuite/allwpilib/tree/main/wpilibjExamples/src/main/java/edu/wpi/first/wpilibj/examples/armbot) - Provides a simple example of `Robot.java`, `RobotContainer.java`, and `Constants.java`.
--   [2539 PracticeBot](https://github.com/FRC2539/practicebot/tree/08f0ba23bc9e5515ac6f05e7efee8af668376946/src/main/java/frc/robot) - Demonstrates an actual implementation of a robot by our team. I would highly recommend looking at this.
+-   **[javabot-template](https://github.com/FRC2539/javabot-template) - Demonstrates an actual implementation of a robot by our team. I would highly recommend looking at this.**
 
 ### Other important information
 
