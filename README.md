@@ -37,6 +37,8 @@ Lastly, I highly recommend learning VSCode shortcuts, as they can dramatically s
 
 The next step is to get hands on!
 
+**Optional but recommended: Watch [this](https://www.youtube.com/watch?v=C5DqnIu6g8k&list=PL4GNHenJg9JD5xdRxByaZZEZP1PPajPeV&index=1&ab_channel=Team2059) the first video of this 3-part series on YouTube, providing an introduction to programming an FRC robot.**
+
 Visit the [projects folder](projects) of this github repository for further instructions!
 
 _Note: solutions are in the [solutions](solutions) directory_
